@@ -12538,11 +12538,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\52850852848\\Documents\\Back-End\\Senai.InLock.WebApi.DatabaseFirst\\Senai.InLock.WebApi.DatabaseFirst\\Senai.InLock.WebApi.DatabaseFirst.csproj",
+      "projectUniqueName": "C:\\Users\\52850852848\\Desktop\\Repositorios\\Back-End\\Senai.InLock.WebApi.DatabaseFirst\\Senai.InLock.WebApi.DatabaseFirst\\Senai.InLock.WebApi.DatabaseFirst.csproj",
       "projectName": "Senai.InLock.WebApi.DatabaseFirst",
-      "projectPath": "C:\\Users\\52850852848\\Documents\\Back-End\\Senai.InLock.WebApi.DatabaseFirst\\Senai.InLock.WebApi.DatabaseFirst\\Senai.InLock.WebApi.DatabaseFirst.csproj",
+      "projectPath": "C:\\Users\\52850852848\\Desktop\\Repositorios\\Back-End\\Senai.InLock.WebApi.DatabaseFirst\\Senai.InLock.WebApi.DatabaseFirst\\Senai.InLock.WebApi.DatabaseFirst.csproj",
       "packagesPath": "C:\\Users\\52850852848\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\52850852848\\Documents\\Back-End\\Senai.InLock.WebApi.DatabaseFirst\\Senai.InLock.WebApi.DatabaseFirst\\obj\\",
+      "outputPath": "C:\\Users\\52850852848\\Desktop\\Repositorios\\Back-End\\Senai.InLock.WebApi.DatabaseFirst\\Senai.InLock.WebApi.DatabaseFirst\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

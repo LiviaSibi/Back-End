@@ -45,5 +45,53 @@ namespace Senai.InLock.WebApi.DatabaseFirst.Controllers
             // Retorna um status code
             return StatusCode(201);
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, Jogo jogo)
+        {
+            Jogo jogoBuscado = _jogoRepository.BuscarPorId(id);
+
+            if (jogoBuscado == null)
+            {
+                return NotFound
+                    (
+                        new
+                        {
+                            mensagem = "Jogo não encontrado",
+                            erro = true
+                        }
+                    );
+            }
+            try
+            {
+                _jogoRepository.Atualizar(id, jogo);
+                return NoContent();
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            _jogoRepository.Deletar(id);
+            return Ok("Jogo Deletado");
+        }
+
+        [HttpGet("Estudios")]
+        public IActionResult GetEstudios()
+        {
+            // Retorna a resposta da requisição fazendo a chamada para o método
+            return Ok(_jogoRepository.ListarComEstudios());
+        }
+
+        [HttpGet("Estudios/{id}")]
+        public IActionResult GetUmEstudio(int id)
+        {
+            // Retorna a resposta da requisição fazendo a chamada para o método
+            return Ok(_jogoRepository.ListarUmEstudio(id));
+        }
     }
 }

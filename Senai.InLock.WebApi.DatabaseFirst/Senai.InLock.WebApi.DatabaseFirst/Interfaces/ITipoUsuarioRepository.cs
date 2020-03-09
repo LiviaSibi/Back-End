@@ -14,8 +14,8 @@ namespace Senai.InLock.WebApi.DatabaseFirst.Interfaces
 
         TipoUsuario BuscarPorId(int id);
 
-        //void Atualizar(int id, TipoUsuario tipoUsuario);
+        void Atualizar(int id, TipoUsuario tipoUsuario);
 
-        //void Deletar(int id);
+        void Deletar(int id);
     }
 }

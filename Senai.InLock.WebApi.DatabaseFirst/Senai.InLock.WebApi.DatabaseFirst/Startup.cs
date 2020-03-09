@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 
 namespace Senai.InLock.WebApi.DatabaseFirst
 {
@@ -17,6 +18,15 @@ namespace Senai.InLock.WebApi.DatabaseFirst
         {
             services
                 .AddMvc()
+
+                //Evita o looping de jogos e estudios e ignora os valores nulos
+                .AddJsonOptions(options => {
+                    // Ignora valores nulos ao fazer junções nas consultas
+                    options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+                    // Ignora os loopings nas consultas
+                    options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                })
+
                 .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_1);
         }
 

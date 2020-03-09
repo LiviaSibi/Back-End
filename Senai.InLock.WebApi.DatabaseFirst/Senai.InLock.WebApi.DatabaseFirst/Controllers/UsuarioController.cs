@@ -45,5 +45,39 @@ namespace Senai.InLock.WebApi.DatabaseFirst.Controllers
             // Retorna um status code
             return StatusCode(201);
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, Usuario usuario)
+        {
+            Usuario usuarioBuscado = _usuarioRepository.BuscarPorId(id);
+
+            if (usuarioBuscado == null)
+            {
+                return NotFound
+                    (
+                        new
+                        {
+                            mensagem = "Usuario não encontrado",
+                            erro = true
+                        }
+                    );
+            }
+            try
+            {
+                _usuarioRepository.Atualizar(id, usuario);
+                return NoContent();
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            _usuarioRepository.Deletar(id);
+            return Ok("Usuario Deletado");
+        }
     }
 }

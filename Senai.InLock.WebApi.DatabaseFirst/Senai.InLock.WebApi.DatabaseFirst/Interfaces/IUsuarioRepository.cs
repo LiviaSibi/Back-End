@@ -13,5 +13,9 @@ namespace Senai.InLock.WebApi.DatabaseFirst.Interfaces
         void Cadastrar(Usuario novoUsuario);
 
         Usuario BuscarPorId(int id);
+
+        void Atualizar(int id, Usuario usuarioAtualizado);
+        
+        void Deletar(int id);
     }
 }

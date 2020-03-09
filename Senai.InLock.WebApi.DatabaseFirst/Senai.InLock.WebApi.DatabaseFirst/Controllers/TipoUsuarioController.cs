@@ -45,5 +45,39 @@ namespace Senai.InLock.WebApi.DatabaseFirst.Controllers
             // Retorna um status code
             return StatusCode(201);
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, TipoUsuario tipoUsuario)
+        {
+            TipoUsuario tipoUsuarioBuscado = _tipoUsuarioRepository.BuscarPorId(id);
+
+            if (tipoUsuarioBuscado == null)
+            {
+                return NotFound
+                    (
+                        new
+                        {
+                            mensagem = "Tipo de Usuário não encontrado",
+                            erro = true
+                        }
+                    );
+            }
+            try
+            {
+                _tipoUsuarioRepository.Atualizar(id, tipoUsuario);
+                return NoContent();
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            _tipoUsuarioRepository.Deletar(id);
+            return Ok("Tipo de Usuário Deletado");
+        }
     }
 }

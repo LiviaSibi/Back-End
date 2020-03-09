@@ -26,5 +26,27 @@ namespace Senai.InLock.WebApi.DatabaseFirst.Repositories
         {
             return ctx.Usuario.ToList();
         }
+
+        public void Atualizar(int id, Usuario usuarioUpdate)
+        {
+            Usuario usuarioBuscado = ctx.Usuario.Find(id);
+
+            usuarioBuscado.Email = usuarioUpdate.Email;
+            usuarioBuscado.Senha = usuarioUpdate.Senha;
+            usuarioBuscado.IdTipoUsuario = usuarioUpdate.IdTipoUsuario;
+
+            ctx.Usuario.Update(usuarioBuscado);
+
+            ctx.SaveChanges();
+        }
+
+        public void Deletar(int id)
+        {
+            Usuario usuarioBuscado = ctx.Usuario.Find(id);
+
+            ctx.Usuario.Remove(usuarioBuscado);
+
+            ctx.SaveChanges();
+        }
     }
 }

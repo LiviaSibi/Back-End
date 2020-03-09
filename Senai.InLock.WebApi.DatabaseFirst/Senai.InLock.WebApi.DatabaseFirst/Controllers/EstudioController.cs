@@ -46,38 +46,44 @@ namespace Senai.InLock.WebApi.DatabaseFirst.Controllers
             return StatusCode(201);
         }
 
-        //[HttpPut("{id}")]
-        //public IActionResult Atualizar(int id, Estudio estudio)
-        //{
-        //    Estudio estudioBuscado = _estudioRepository.BuscarPorId(id);
-        //
-         //   if (estudioBuscado == null)
-        //    {
-          //      return NotFound
-         //           (
-         //               new
-        //                {
-        //                    mensagem = "Estudio não encontrado",
-        //                    erro = true
-        //                }
-        //            );
-        //    }
-        //    try
-        //    {
-        //        _estudioRepository.Atualizar(id, estudio);
-       //         return NoContent();
-        //    }
-        //    catch (Exception erro)
-        //    {
-        //        return BadRequest(erro);
-        //    }
-       // }
+        [HttpPut("{id}")]
+        public IActionResult Atualizar(int id, Estudio estudio)
+        {
+            Estudio estudioBuscado = _estudioRepository.BuscarPorId(id);
+        
+            if (estudioBuscado == null)
+            {
+                return NotFound
+                    (
+                        new
+                        {
+                            mensagem = "Estudio não encontrado",
+                            erro = true
+                        }
+                    );
+            }
+            try
+            {
+                _estudioRepository.Atualizar(id, estudio);
+                return NoContent();
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro);
+            }
+        }
 
-        //[HttpDelete("{id}")]
-        //public IActionResult Deletar(int id)
-       // {
-       //     _estudioRepository.Deletar(id);
-       ///     return Ok("Estudio Deletado");
-       // }
+        [HttpDelete("{id}")]
+        public IActionResult Deletar(int id)
+        {
+            _estudioRepository.Deletar(id);
+            return Ok("Estudio Deletado");
+        }
+
+        [HttpGet("Jogos")]
+        public IActionResult GetJogos()
+        {
+            return Ok(_estudioRepository.ListarJogos());
+        }
     }
 }

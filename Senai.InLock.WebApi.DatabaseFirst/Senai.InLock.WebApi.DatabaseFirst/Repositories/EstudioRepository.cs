@@ -1,4 +1,5 @@
-﻿using Senai.InLock.WebApi.DatabaseFirst.Domains;
+﻿using Microsoft.EntityFrameworkCore;
+using Senai.InLock.WebApi.DatabaseFirst.Domains;
 using Senai.InLock.WebApi.DatabaseFirst.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -31,19 +32,30 @@ namespace Senai.InLock.WebApi.DatabaseFirst.Repositories
             return ctx.Estudio.ToList();
         }
 
-        //public void Atualizar(int id, Estudio estudio)
-        //{
-        //    ctx.Estudio.FirstOrDefault(e => e.IdEstudio == id);
+        public void Atualizar(int id, Estudio estudio)
+        {
+            Estudio estudioBuscado = ctx.Estudio.Find(id);
 
-        //    ctx.Estudio.UpdateRange(id, estudio);
+            estudioBuscado.NomeEstudio = estudio.NomeEstudio;
 
-        //    ctx.SaveChanges();
-        //}
+            ctx.Estudio.Update(estudioBuscado);
 
-        //public void Deletar(int id)
-        //{
-        //    ctx.Estudio.FirstOrDefault(e => e.IdEstudio == id);
-        //    ctx.Estudio.RemoveRange(id);
-        //}
+            ctx.SaveChanges();
+        }
+
+        public void Deletar(int id)
+        {
+            Estudio estudioBuscado = ctx.Estudio.Find(id);
+
+            ctx.Estudio.RemoveRange(estudioBuscado);
+
+            ctx.SaveChanges();
+        }
+
+        public List<Estudio> ListarJogos()
+        {
+            //Junção de duas tabelas (Include)
+            return ctx.Estudio.Include(e => e.Jogo).ToList();
+        }
     }
 }
