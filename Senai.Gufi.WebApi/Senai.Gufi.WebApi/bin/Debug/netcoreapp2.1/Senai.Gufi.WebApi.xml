@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senai.Gufi.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Senai.Gufi.WebApi.Controllers.InstituicaoController.Get">
+            <summary>
+            Lista todas as Instituições
+            </summary>
+            <returns>Retorna todas as Instituições</returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.InstituicaoController.GetById(System.Int32)">
+            <summary>
+            Lista as Instituições por id
+            </summary>
+            <param name="id">Id que será buscado</param>
+            <returns>Retorna a instituição do id buscado</returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.InstituicaoController.Post(Senai.Gufi.WebApi.Domains.Instituicao)">
+            <summary>
+            Cadastra uma nova instituição
+            </summary>
+            <param name="novaInstituicao">Nome da instituição que será cadastrado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.InstituicaoController.Put(System.Int32,Senai.Gufi.WebApi.Domains.Instituicao)">
+            <summary>
+            Atualiza uma instituição
+            </summary>
+            <param name="id">Id que será atualizado</param>
+            <param name="instituicaoAtualizada">Atualização dos dados da instituição</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.InstituicaoController.Deletar(System.Int32)">
+            <summary>
+            Deleta uma instituição
+            </summary>
+            <param name="id">Id da instituição que será deletado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.LoginController.Post(Senai.Gufi.WebApi.ViewModels.LoginViewModel)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="Login">Objeto login que contém o e-mail e a senha do usuário</param>
+            <returns>Retorna um token com as informações do usuário</returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.PresencasController.Get">
+            <summary>
+            Lista todas as presenças
+            </summary>
+            <returns>Retorna todas as presenças</returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.TipoEventoController.Get">
+            <summary>
+            Lista todos os tipos de eventos
+            </summary>
+            <returns>Retorna todos os tipos de eventos</returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.TipoEventoController.GetById(System.Int32)">
+            <summary>
+            Lista os tipos de evento por id
+            </summary>
+            <param name="id">Id que será buscado</param>
+            <returns>Retorna o tipos de evento do id buscado</returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.TipoEventoController.Post(Senai.Gufi.WebApi.Domains.TipoEvento)">
+            <summary>
+            Cadastra um novo tipo de evento
+            </summary>
+            <param name="novoTipoEvento">Nome do tipo de evento que será cadastrado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.TipoEventoController.Put(System.Int32,Senai.Gufi.WebApi.Domains.TipoEvento)">
+            <summary>
+            Atualiza um Tipo de Evento
+            </summary>
+            <param name="id">Id que será atualizado</param>
+            <param name="tipoEventoAtualizado">Atualização dos dados do Tipo de Evento</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.TipoEventoController.Deletar(System.Int32)">
+            <summary>
+            Deleta um Tipo de Evento
+            </summary>
+            <param name="id">Id do Tipo de Evento que será deletado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.TipoUsuarioController.Get">
+            <summary>
+            Lista todos os tipos de eventos
+            </summary>
+            <returns>Retorna todos os tipos de eventos</returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.TipoUsuarioController.GetById(System.Int32)">
+            <summary>
+            Lista os tipos de evento por id
+            </summary>
+            <param name="id">Id que será buscado</param>
+            <returns>Retorna o tipos de evento do id buscado</returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.TipoUsuarioController.Post(Senai.Gufi.WebApi.Domains.TipoUsuario)">
+            <summary>
+            Cadastra um novo tipo de evento
+            </summary>
+            <param name="novoTipoEvento">Nome do tipo de evento que será cadastrado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.TipoUsuarioController.Put(System.Int32,Senai.Gufi.WebApi.Domains.TipoUsuario)">
+            <summary>
+            Atualiza um Tipo de Evento
+            </summary>
+            <param name="id">Id que será atualizado</param>
+            <param name="tipoEventoAtualizado">Atualização dos dados do Tipo de Evento</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.TipoUsuarioController.Deletar(System.Int32)">
+            <summary>
+            Deleta um Tipo de Evento
+            </summary>
+            <param name="id">Id do Tipo de Evento que será deletado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.UsuarioController.Get">
+            <summary>
+            Lista todos os usuario
+            </summary>
+            <returns>Retorna todos os usuarios</returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.UsuarioController.GetById(System.Int32)">
+            <summary>
+            Lista os usuarios por id
+            </summary>
+            <param name="id">Id que será buscado</param>
+            <returns>Retorna o usuario do id buscado</returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.UsuarioController.Post(Senai.Gufi.WebApi.Domains.Usuarios)">
+            <summary>
+            Cadastra um novo usuarios
+            </summary>
+            <param name="novoUsuario">Nome do usuario que será cadastrado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.UsuarioController.Put(System.Int32,Senai.Gufi.WebApi.Domains.Usuarios)">
+            <summary>
+            Atualiza um usuario
+            </summary>
+            <param name="id">Id que será atualizado</param>
+            <param name="usuarioAtualizado">Atualização dos dados do usuario</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Gufi.WebApi.Controllers.UsuarioController.Deletar(System.Int32)">
+            <summary>
+            Deleta um usuario
+            </summary>
+            <param name="id">Id do usuario que será deletado</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
