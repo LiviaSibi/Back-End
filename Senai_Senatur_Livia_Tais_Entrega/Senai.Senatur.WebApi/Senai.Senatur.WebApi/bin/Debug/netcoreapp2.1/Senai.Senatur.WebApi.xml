@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senai.Senatur.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Senai.Senatur.WebApi.Controllers.LoginController">
+            <summary>
+            Controller responsável pelo Login
+            </summary>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.LoginController.Post(Senai.Senatur.WebApi.ViewModels.LoginViewModel)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="Login">Objeto login que contém o e-mail e a senha do usuário</param>
+            <returns>Retorna um token com as informações do usuário</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacoteController.Get">
+            <summary>
+            Lista todos os pacotes
+            </summary>
+            <returns>Retorna todos os pacotes</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacoteController.GetById(System.Int32)">
+            <summary>
+            Lista os pacotes por id
+            </summary>
+            <param name="id">Id que será buscado</param>
+            <returns>Retorna o pacote do id buscado</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacoteController.Post(Senai.Senatur.WebApi.Domains.Pacotes)">
+            <summary>
+            Cadastra um novo Pacote
+            </summary>
+            <param name="novoPacote">Nome do Pacote que será cadastrado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacoteController.Atualizar(System.Int32,Senai.Senatur.WebApi.Domains.Pacotes)">
+            <summary>
+            Atualiza um pacote
+            </summary>
+            <param name="id">Id que será atualizado</param>
+            <param name="pacote">Atualização dos dados do pacote</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.PacoteController.Deletar(System.Int32)">
+            <summary>
+            Deleta um pacote
+            </summary>
+            <param name="id">Id do pacote que será deletado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.TipoUsuarioController.Get">
+            <summary>
+            Lista todos os Tipos de usuário
+            </summary>
+            <returns>Retorna todos os tipos de usuário</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.TipoUsuarioController.GetById(System.Int32)">
+            <summary>
+            Lista os tipos de usuário por id
+            </summary>
+            <param name="id">Id que será buscado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.TipoUsuarioController.Post(Senai.Senatur.WebApi.Domains.TiposUsuario)">
+            <summary>
+            Cadastra um novo tipo de usuário
+            </summary>
+            <param name="novoTipoUsuario">Nome do tipo de usuário que será cadastrado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.TipoUsuarioController.Atualizar(System.Int32,Senai.Senatur.WebApi.Domains.TiposUsuario)">
+            <summary>
+            Atualiza um tipo de usuário
+            </summary>
+            <param name="id">Id que será atualizado</param>
+            <param name="tipoUsuario">Atualização dos dados do tipo de usuário</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.TipoUsuarioController.Deletar(System.Int32)">
+            <summary>
+            Deleta um tipo de usuário
+            </summary>
+            <param name="id">Id do tipo de usuário que será deletado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.UsuarioController.Get">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns>Retorna todos os usuários</returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.UsuarioController.GetById(System.Int32)">
+            <summary>
+            Lista os usuários por id
+            </summary>
+            <param name="id">Id que será buscado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.UsuarioController.Post(Senai.Senatur.WebApi.Domains.Usuarios)">
+            <summary>
+            Cadastra um usuário
+            </summary>
+            <param name="novoUsuario">Nome do usuário que será cadastrado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.UsuarioController.Atualizar(System.Int32,Senai.Senatur.WebApi.Domains.Usuarios)">
+            <summary>
+            Atualiza um usuário
+            </summary>
+            <param name="id">Id que será atualizado</param>
+            <param name="usuario">Atualização dos dados do usuário</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.Senatur.WebApi.Controllers.UsuarioController.Deletar(System.Int32)">
+            <summary>
+            Deleta um usuário
+            </summary>
+            <param name="id">Id do usuário que será deletado</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

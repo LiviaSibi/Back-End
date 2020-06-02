@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Senai.InLock.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Senai.InLock.WebApi.Controller.EstudioController.Get">
+            <summary>
+            Lista todos os estúdios
+            </summary>
+            <returns>Retorna todos os estudios</returns>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Controller.EstudioController.Cadastrar(Senai.InLock.WebApi.Domains.EstudioDomain)">
+            <summary>
+            Cadastra um novo Estudio
+            </summary>
+            <param name="novoEstudio">Nome do novoEstudio que será cadastrado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Controller.JogoController.Get">
+            <summary>
+            Lista todos os jogos
+            </summary>
+            <returns>Retorna todos os jogos</returns>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Controller.JogoController.Cadastrar(Senai.InLock.WebApi.Domains.JogoDomain)">
+            <summary>
+            Cadastra um novo jogo
+            </summary>
+            <param name="novoJogo">Nome do novoJogo que será cadastrado</param>
+            <returns></returns>
+        </member>
+        <member name="T:Senai.InLock.WebApi.Controller.LoginController">
+            <summary>
+            Controller responsável pelo Login
+            </summary>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Controller.LoginController.Post(Senai.InLock.WebApi.ViewModels.LoginViewModel)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="Login">Objeto login que contém o e-mail e a senha do usuário</param>
+            <returns>Retorna um token com as informações do usuário</returns>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Controller.TipoUsuarioController.Get">
+            <summary>
+            Lista todos os tipos de usuário
+            </summary>
+            <returns>Retorna todos os tipos</returns>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Controller.UsuarioController.Get">
+            <summary>
+            Lista todos os Usuarios
+            </summary>
+            <returns>Retorna todos os usuarios cadastrados</returns>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Controller.UsuarioController.Cadastrar(Senai.InLock.WebApi.Domains.UsuarioDomain)">
+            <summary>
+            Cadastra um novo usuário
+            </summary>
+            <param name="novoUsuario">Nome do novoUsuario que será cadastrado</param>
+            <returns></returns>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Repository.EstudioRepository.Listar">
+            <summary>
+            Lista todos os estúdios
+            </summary>
+            <returns>Retorna todos os estudios</returns>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Repository.EstudioRepository.Cadastrar(Senai.InLock.WebApi.Domains.EstudioDomain)">
+            <summary>
+            Cadastra um novo estúdio
+            </summary>
+            <param name="cadastrarEstudio">Novo estúdio que será cadastrados</param>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Repository.JogosRepository.Listar">
+            <summary>
+            Lista todos os jogos
+            </summary>
+            <returns>Retorna todos os jogos</returns>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Repository.JogosRepository.Cadastrar(Senai.InLock.WebApi.Domains.JogoDomain)">
+            <summary>
+            Cadastra um novo jogo
+            </summary>
+            <param name="cadastrarJogo">Novo jogo que será cadastrado</param>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Repository.TipoUsuarioRepository.Listar">
+            <summary>
+            Lista todos os tipos de usuário
+            </summary>
+            <returns>Retorna todos os tipos</returns>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Repository.UsuarioRepository.Listar">
+            <summary>
+            Lista todos os Usuarios
+            </summary>
+            <returns>Retorna todos os usuarios cadastrados</returns>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Repository.UsuarioRepository.Cadastrar(Senai.InLock.WebApi.Domains.UsuarioDomain)">
+            <summary>
+            Cadastrar um novo usuario
+            </summary>
+            <param name="novoUsuario">Novo Usuario que será cadastrado</param>
+        </member>
+        <member name="M:Senai.InLock.WebApi.Repository.UsuarioRepository.BuscarEmailSenha(System.String,System.String)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="email">E-mail do usuário</param>
+            <param name="senha">Senha do usuário</param>
+            <returns>Retorna um usuário validado</returns>
+        </member>
+    </members>
+</doc>

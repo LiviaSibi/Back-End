@@ -1,0 +1,27 @@
+CREATE DATABASE Senatur_Manha;
+
+USE Senatur_Manha;
+
+CREATE TABLE Pacotes(
+	IdPacote INT PRIMARY KEY IDENTITY
+	,NomePacote	VARCHAR(255) NOT NULL
+	,Descricao	TEXT NOT NULL 
+	,DataIda	DATE NOT NULL
+	,DataVolta	DATE NOT NULL
+	,Valor		DECIMAL(16,2) NOT NULL
+	,Ativo		BIT DEFAULT (1) NOT NULL
+	,NomeCidade VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE TiposUsuario(
+	IdTipoUsuario	INT PRIMARY KEY IDENTITY
+	,Titulo			VARCHAR(200) NOT NULL UNIQUE
+);
+
+CREATE TABLE Usuarios (
+	IdUsuario	INT PRIMARY KEY IDENTITY
+	,Email		VARCHAR(150) NOT NULL UNIQUE
+	,Senha		VARCHAR(150) NOT NULL
+	,IdTipoUsuario	INT FOREIGN KEY REFERENCES TiposUsuario (IdTipoUsuario)
+);
+
