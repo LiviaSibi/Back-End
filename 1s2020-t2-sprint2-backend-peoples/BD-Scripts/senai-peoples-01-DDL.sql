@@ -1,0 +1,22 @@
+CREATE DATABASE M_Peoples;
+
+USE M_Peoples;
+
+CREATE TABLE TipoUsuarios(
+	IDTipoUsuario	INT PRIMARY KEY IDENTITY,
+	Titulo			VARCHAR (255) NOT NULL UNIQUE
+);
+
+CREATE TABLE Usuarios(
+	IDUsuario	INT PRIMARY KEY IDENTITY,
+	Email		VARCHAR (255) NOT NULL UNIQUE,
+	Senha		VARCHAR (255) NOT NULL,
+	IDTipoUsuario INT FOREIGN KEY REFERENCES TipoUsuarios (IDTipoUsuario)
+);
+
+CREATE TABLE Funcionarios(
+	IDFuncionario	INT PRIMARY KEY IDENTITY,
+	Nome			VARCHAR (255) NOT NULL,
+	Sobrenome		VARCHAR (255) NOT NULL,
+	DataNascimento	DATE
+);
